@@ -2,7 +2,12 @@ import { createServer } from "http";
 import SocketIo, { Server } from "socket.io";
 
 const httpServer = createServer();
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+	cors: {
+		origin: "http://localhost:3000",
+		methods: ['GET', 'POST', 'PUT', 'DELETE', 'UPDATE']
+	}
+});
 
 io.on("connection", (socket: SocketIo.Socket) => {
 	console.log("Hello world, you are connected on the socket ! Congratulations !!!");
