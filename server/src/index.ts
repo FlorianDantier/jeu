@@ -1,16 +1,16 @@
-import { createServer } from "http";
-import SocketIo, { Server } from "socket.io";
+import {createServer} from "http";
+import {Server, Socket} from "socket.io";
+import {ClientEvent, ServerEvent} from "./events";
+import {createApplication} from "./app";
 
 const httpServer = createServer();
-const io = new Server(httpServer, {
-	cors: {
-		origin: "http://localhost:3000",
-		methods: ['GET', 'POST', 'PUT', 'DELETE', 'UPDATE']
-	}
-});
 
-io.on("connection", (socket: SocketIo.Socket) => {
-	console.log("Hello world, you are connected on the socket ! Congratulations !!!");
-});
+const serverOptions = {
+  cors: {
+    origin: "http://localhost:3000",
+  },
+};
+
+createApplication(httpServer, serverOptions);
 
 httpServer.listen(8080);

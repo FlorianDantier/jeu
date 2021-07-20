@@ -1,0 +1,14 @@
+{
+  "name": "jeu",
+  "scripts": {
+    "prettier": "prettier --config .prettierrc '*/src/**/*' --ignore-unknown --write",
+    "prettier-check": "prettier --config .prettierrc '*/src/**/*' --ignore-unknown --check"
+  },
+  "scriptsComments": {
+    "prettier": "Reformat all the files according to the prettier config",
+    "prettier-check": "Check all the files according to the prettier config and fail if the files are not properly formatted"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}

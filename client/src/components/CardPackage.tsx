@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function CardPackage () {
-	return (
-		<button>Piocher</button>
-	)
+export default function CardPackage() {
+  return <button>Piocher</button>;
 }

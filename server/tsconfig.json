@@ -1,16 +1,16 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
-	"noImplicitAny": true,
-        "module": "commonjs",
+	    "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "module": "CommonJS",
         "outDir": "dist",
-        "target": "es6",
+        "target": "ES2019",
         "strict": true,
         "strictNullChecks": true,
-	"sourceMap": true
+	    "sourceMap": true
     },
     "include":[
         "src/**/*",
-        "script/**/*"
     ]
 }
